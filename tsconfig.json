@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "jsx": "react",
+        "lib": [
+            "es2015",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ],
+        "experimentalDecorators": true,
+        "baseUrl": "src",
+        "paths": {
+            "@Assets/*": [ "Assets/*" ],
+            "@Interfaces/*": [ "Interfaces/*" ],
+            "@Models/*": [ "Models/*" ],
+            "@States/*": [ "States/*" ],
+            "@Stores/*": [ "Stores/*" ],
+            "@Views/*": [ "Views/*" ],
+            "@Utils/*": [ "Utils/*" ]
+        },
+        "typeRoots": [
+            "src/Types"
+        ],
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "pretty": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

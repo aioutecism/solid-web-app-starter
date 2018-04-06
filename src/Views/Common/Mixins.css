@@ -1,0 +1,22 @@
+:root {
+  --clearfix: {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  --break-word: {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  --text-overflow: {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @custom-media --small-viewport (max-width: 420px);
+  @custom-media --medium-viewport (max-width: 800px);
+  @custom-media --2x (min-resolution: 192dpi);
+}
