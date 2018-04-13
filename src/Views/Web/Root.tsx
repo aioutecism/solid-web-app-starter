@@ -14,9 +14,9 @@ interface IProps extends RouteComponentProps<{}> {}
 
 @observer
 export class WebRoot extends React.Component<IProps, {}> {
-    public componentWillReceiveProps(nextProps: Readonly<IProps>) {
-        if (nextProps.location !== this.props.location) {
-            appState.ui.lastLocation = this.props.location;
+    public componentDidUpdate(prevProps: Readonly<IProps>) {
+        if (prevProps.location !== this.props.location) {
+            appState.ui.lastLocation = prevProps.location;
         }
     }
 

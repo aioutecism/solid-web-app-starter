@@ -16,13 +16,13 @@ export class RootRoute extends Route {
         this.scrollOnNeed();
     }
 
-    public componentWillReceiveProps(nextProps: RouteProps, nextContext: any) {
-        if (super.componentWillReceiveProps) {
-            super.componentWillReceiveProps(nextProps, nextContext);
+    public componentDidUpdate(prevProps: Readonly<RouteProps>, prevState: Readonly<any>, snapshot?: never) {
+        if (super.componentDidUpdate) {
+            super.componentDidUpdate(prevProps, prevState, snapshot);
         }
 
-        if (this.props.component !== nextProps.component ||
-            getMatchUrl(this.props) !== getMatchUrl(nextProps)) {
+        if (prevProps.component !== this.props.component ||
+            getMatchUrl(prevProps) !== getMatchUrl(this.props)) {
             this.scrollOnNeed();
         }
     }
